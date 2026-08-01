@@ -1,0 +1,302 @@
+/* ===========================
+   DISCOVER HERO
+=========================== */
+
+.discover-hero {
+    position: relative;
+    min-height: 100vh;
+    padding: 10rem 8% 7rem;
+
+    display: flex;
+    align-items: flex-end;
+
+    overflow: hidden;
+    isolation: isolate;
+
+    background: var(--forest);
+}
+
+.discover-hero-background {
+    position: absolute;
+    inset: 0;
+
+    z-index: -2;
+
+    background:
+        linear-gradient(90deg,
+            rgba(6, 12, 9, 0.9) 0%,
+            rgba(6, 12, 9, 0.58) 52%,
+            rgba(6, 12, 9, 0.18) 100%),
+        linear-gradient(to bottom,
+            rgba(6, 12, 9, 0.18),
+            rgba(6, 12, 9, 0.72)),
+        url("../assets/images/arch-background.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    filter: saturate(0.82);
+    transform: scale(1.02);
+}
+
+.discover-hero::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 200px;
+
+    z-index: -1;
+
+    background: linear-gradient(to bottom,
+            transparent,
+            var(--forest));
+}
+
+.discover-hero-content {
+    max-width: 980px;
+}
+
+.discover-hero h1 {
+    margin-bottom: 2rem;
+
+    font-family: var(--heading-font);
+    font-size: clamp(4rem, 7vw, 7rem);
+    font-weight: 400;
+    line-height: 0.96;
+    letter-spacing: -0.03em;
+}
+
+.discover-hero-content>p:not(.section-label) {
+    max-width: 570px;
+    margin-bottom: 2.7rem;
+
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.9;
+
+    color: rgba(243, 245, 240, 0.78);
+}
+
+.discover-hero-button,
+.discover-start-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    color: var(--sage);
+
+    transition: var(--transition);
+}
+
+.discover-hero-button:hover,
+.discover-start-button:hover {
+    color: var(--gold);
+}
+
+.discover-hero-button span,
+.discover-start-button span {
+    transition: transform var(--transition);
+}
+
+.discover-hero-button:hover span {
+    transform: translateY(5px);
+}
+
+.discover-start-button:hover span {
+    transform: translateX(5px);
+}
+
+/* ===========================
+   STEPS
+=========================== */
+
+.discover-steps {
+    position: relative;
+    padding: 11rem 8%;
+
+    background:
+        linear-gradient(to bottom,
+            var(--forest),
+            #0b1711 55%,
+            var(--background));
+}
+
+.discover-steps-heading {
+    max-width: 900px;
+    margin-bottom: 6rem;
+}
+
+.discover-steps-heading h2 {
+    font-family: var(--heading-font);
+    font-size: clamp(3.6rem, 6vw, 6.2rem);
+    font-weight: 400;
+    line-height: 0.98;
+    letter-spacing: -0.03em;
+}
+
+.steps-list {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.step-row {
+    min-height: 230px;
+    padding: 3.4rem 0;
+
+    display: grid;
+    grid-template-columns: minmax(130px, 0.32fr) 80px 1fr;
+    align-items: center;
+    gap: 2.5rem;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.step-number {
+    font-family: var(--heading-font);
+    font-size: clamp(5.5rem, 9vw, 8.5rem);
+    line-height: 0.8;
+
+    color: rgba(200, 169, 116, 0.18);
+}
+
+.step-icon {
+    width: 66px;
+    height: 66px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid rgba(200, 169, 116, 0.28);
+    border-radius: 50%;
+
+    background: rgba(200, 169, 116, 0.025);
+}
+
+.step-icon img {
+    width: 36px;
+    height: 36px;
+}
+
+.step-copy {
+    max-width: 680px;
+}
+
+.step-copy h3 {
+    margin-bottom: 1rem;
+
+    font-family: var(--heading-font);
+    font-size: clamp(2.3rem, 4vw, 4rem);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.step-copy p {
+    max-width: 580px;
+
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.9;
+
+    color: var(--muted);
+}
+
+/* ===========================
+   DISCOVER CTA
+=========================== */
+
+.discover-cta {
+    max-width: 860px;
+    margin-top: 10rem;
+    padding-top: 7rem;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.discover-cta h2 {
+    margin-bottom: 1.5rem;
+
+    font-family: var(--heading-font);
+    font-size: clamp(3.8rem, 6vw, 6rem);
+    font-weight: 400;
+    line-height: 0.98;
+    letter-spacing: -0.03em;
+}
+
+.discover-cta>p:not(.section-label) {
+    max-width: 590px;
+    margin-bottom: 2.5rem;
+
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.9;
+
+    color: var(--muted);
+}
+
+.discover-start-button {
+    padding: 0.9rem 1.5rem;
+
+    border: 1px solid rgba(200, 169, 116, 0.45);
+    border-radius: 999px;
+}
+
+.discover-start-button:hover {
+    border-color: var(--gold);
+
+    background: rgba(200, 169, 116, 0.07);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 900px) {
+
+    .discover-hero,
+    .discover-steps {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .step-row {
+        grid-template-columns: 100px 65px 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .discover-hero {
+        min-height: 100svh;
+        padding: 8rem 5% 5rem;
+    }
+
+    .discover-hero h1 {
+        font-size: clamp(3.5rem, 15vw, 5rem);
+    }
+
+    .discover-steps {
+        padding: 8rem 5%;
+    }
+
+    .step-row {
+        grid-template-columns: 1fr;
+        gap: 1.3rem;
+    }
+
+    .step-number {
+        font-size: 5rem;
+    }
+
+    .discover-cta {
+        margin-top: 7rem;
+        padding-top: 5rem;
+    }
+}

@@ -1,37 +1,41 @@
 const navbar = document.querySelector(".navbar");
-const hero = document.querySelector(".hero");
 
-window.addEventListener("scroll", () => {
+const pageHero =
+    document.querySelector(".hero") ||
+    document.querySelector(".discover-hero") ||
+    document.querySelector(".planner-page");
 
-    const heroHeight = hero.offsetHeight;
+if (navbar && pageHero) {
+    window.addEventListener("scroll", () => {
+        const heroHeight = pageHero.offsetHeight;
 
-    // 0 = top of hero
-    // 1 = bottom of hero
-    let progress = window.scrollY / heroHeight;
+        let progress = window.scrollY / heroHeight;
 
-    // Keep between 0 and 1
-    progress = Math.max(0, Math.min(progress, 1));
+        progress = Math.max(0, Math.min(progress, 1));
 
-    // Don't start fading immediately
-    const fadeStart = 0.25;
-    const fadeEnd = 0.70;
+        const fadeStart = 0.18;
+        const fadeEnd = 0.62;
 
-    let opacity = 0;
+        let opacity = 0;
 
-    if (progress > fadeStart) {
-        opacity = (progress - fadeStart) / (fadeEnd - fadeStart);
-        opacity = Math.min(opacity, 1);
-    }
+        if (progress > fadeStart) {
+            opacity =
+                (progress - fadeStart) /
+                (fadeEnd - fadeStart);
 
-    navbar.style.background = `rgba(8,16,12,${opacity * 0.22})`;
+            opacity = Math.min(opacity, 1);
+        }
 
-    navbar.style.backdropFilter =
-        `blur(${opacity * 22}px) saturate(${100 + opacity * 45}%)`;
+        navbar.style.background =
+            `rgba(8,16,12,${opacity * 0.72})`;
 
-    navbar.style.webkitBackdropFilter =
-        `blur(${opacity * 22}px) saturate(${100 + opacity * 45}%)`;
+        navbar.style.backdropFilter =
+            `blur(${opacity * 22}px) saturate(${100 + opacity * 45}%)`;
 
-    navbar.style.borderBottom =
-        `1px solid rgba(255,255,255,${opacity * 0.08})`;
+        navbar.style.webkitBackdropFilter =
+            `blur(${opacity * 22}px) saturate(${100 + opacity * 45}%)`;
 
-});
+        navbar.style.borderBottom =
+            `1px solid rgba(255,255,255,${opacity * 0.08})`;
+    });
+}

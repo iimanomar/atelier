@@ -1,0 +1,392 @@
+/* ===========================
+   PLANNER PAGE
+=========================== */
+
+.planner-page {
+    position: relative;
+    min-height: 100vh;
+    padding: 10rem 8% 7rem;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+    isolation: isolate;
+
+    background: var(--background);
+}
+
+.planner-background {
+    position: absolute;
+    inset: 0;
+
+    z-index: -3;
+
+    background: url("../assets/images/china.jpg");
+    background-size: cover;
+    background-position: center;
+
+    filter: brightness(0.92) contrast(1.05) saturate(0.85);
+    transform: scale(1.03);
+}
+
+.planner-overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: -2;
+
+    background:
+        linear-gradient(90deg,
+            rgba(5, 11, 8, 0.82) 0%,
+            rgba(5, 11, 8, 0.65) 45%,
+            rgba(5, 11, 8, 0.30) 100%),
+        linear-gradient(to bottom,
+            rgba(5, 11, 8, 0.15),
+            rgba(5, 11, 8, 0.45));
+}
+
+.planner-page::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 160px;
+
+    z-index: -1;
+
+    background: linear-gradient(to bottom,
+            transparent,
+            var(--background));
+}
+
+.planner-layout {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: minmax(320px, 0.8fr) minmax(600px, 1.2fr);
+    align-items: center;
+    gap: 6rem;
+}
+
+.planner-intro {
+    max-width: 650px;
+}
+
+.planner-intro h1 {
+    margin-bottom: 1.7rem;
+
+    font-family: var(--heading-font);
+    font-size: clamp(4rem, 6vw, 6.5rem);
+    font-weight: 400;
+    line-height: 0.96;
+    letter-spacing: -0.03em;
+}
+
+.planner-intro>p:not(.section-label) {
+    max-width: 540px;
+    margin-bottom: 2.5rem;
+
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.9;
+
+    color: rgba(243, 245, 240, 0.74);
+}
+
+.planner-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.9rem;
+
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    color: var(--sage);
+
+    transition: var(--transition);
+}
+
+.planner-back-link:hover {
+    color: var(--gold);
+}
+
+.planner-back-link span {
+    transition: transform var(--transition);
+}
+
+.planner-back-link:hover span {
+    transform: translateX(-5px);
+}
+
+/* ===========================
+   FORM CARD
+=========================== */
+
+.planner-form {
+    width: 100%;
+    max-width: 900px;
+    padding: 3rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+
+    border: 1px solid rgba(255, 255, 255, 0.11);
+
+    background: rgba(8, 16, 12, 0.66);
+
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.28);
+
+    backdrop-filter: blur(18px) saturate(120%);
+    -webkit-backdrop-filter: blur(18px) saturate(120%);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.form-group label,
+.interest-group legend {
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    color: var(--sage);
+}
+
+/* ===========================
+   CUSTOM SELECTS
+=========================== */
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper::after {
+    content: "⌄";
+
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+
+    transform: translateY(-58%);
+
+    color: var(--gold);
+    font-size: 1rem;
+    line-height: 1;
+
+    pointer-events: none;
+}
+
+.select-wrapper select {
+    width: 100%;
+    padding: 1rem 2.8rem 1rem 1rem;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    font-family: var(--body-font);
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+
+    color: var(--text);
+    background: rgba(8, 16, 12, 0.86);
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 10px;
+
+    outline: none;
+    cursor: pointer;
+
+    transition:
+        border-color var(--transition),
+        background var(--transition),
+        box-shadow var(--transition);
+}
+
+.select-wrapper select:hover {
+    border-color: rgba(200, 169, 116, 0.45);
+}
+
+.select-wrapper select:focus {
+    border-color: var(--gold);
+    background: rgba(8, 16, 12, 0.96);
+
+    box-shadow: 0 0 0 3px rgba(200, 169, 116, 0.08);
+}
+
+.select-wrapper select:invalid {
+    color: rgba(243, 245, 240, 0.58);
+}
+
+.select-wrapper select option {
+    color: var(--text);
+    background: var(--forest);
+
+    font-family: var(--body-font);
+}
+
+/* ===========================
+   INTERESTS
+=========================== */
+
+.interest-group {
+    grid-column: 1 / -1;
+
+    border: 0;
+}
+
+.interest-group legend {
+    margin-bottom: 1.2rem;
+}
+
+.interest-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.interest-option input {
+    position: absolute;
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+.interest-option span {
+    display: inline-flex;
+
+    padding: 0.75rem 1rem;
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 999px;
+
+    background: rgba(8, 16, 12, 0.42);
+    color: var(--muted);
+
+    font-size: 0.78rem;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+.interest-option span:hover {
+    border-color: rgba(200, 169, 116, 0.52);
+    color: var(--text);
+}
+
+.interest-option input:checked+span {
+    border-color: var(--gold);
+
+    background: rgba(200, 169, 116, 0.12);
+    color: var(--gold);
+}
+
+.form-error {
+    grid-column: 1 / -1;
+
+    min-height: 1.4rem;
+
+    font-size: 0.85rem;
+
+    color: #e3ac95;
+}
+
+.planner-button {
+    grid-column: 1 / -1;
+    justify-self: start;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 0.9rem 1.5rem;
+
+    border: 1px solid rgba(200, 169, 116, 0.5);
+    border-radius: 999px;
+
+    background: rgba(200, 169, 116, 0.025);
+    color: var(--sage);
+
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+.planner-button:hover {
+    border-color: var(--gold);
+
+    background: rgba(200, 169, 116, 0.1);
+    color: var(--gold);
+}
+
+.planner-button span {
+    transition: transform var(--transition);
+}
+
+.planner-button:hover span {
+    transform: translateX(5px);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 1100px) {
+    .planner-page {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .planner-layout {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .planner-form {
+        max-width: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .planner-page {
+        min-height: auto;
+        padding: 9rem 5% 6rem;
+    }
+
+    .planner-background {
+        background-position: 62% center;
+    }
+
+    .planner-intro h1 {
+        font-size: clamp(3.6rem, 15vw, 5rem);
+    }
+
+    .planner-form {
+        padding: 1.5rem;
+
+        grid-template-columns: 1fr;
+    }
+
+    .form-group,
+    .interest-group,
+    .form-error,
+    .planner-button {
+        grid-column: 1;
+    }
+}

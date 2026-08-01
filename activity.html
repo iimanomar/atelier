@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Plan Your Day | Atelier</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/activity.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                Atelier
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="moments.html">Moments</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+
+            <a href="login.html" class="nav-button">
+                Sign In
+            </a>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="planner-page">
+
+            <div class="planner-background"></div>
+            <div class="planner-overlay"></div>
+
+            <div class="planner-layout">
+
+                <div class="planner-intro">
+
+                    <p class="section-label">
+                        Create your itinerary
+                    </p>
+
+                    <h1>
+                        Tell us about your day.
+                    </h1>
+
+                    <p>
+                        Choose your destination, available time, budget and
+                        interests. Atelier will use your selections to create
+                        a personalised travel experience.
+                    </p>
+
+                    <a href="discover.html" class="planner-back-link">
+                        <span>←</span>
+                        How Atelier works
+                    </a>
+
+                </div>
+
+                <form class="planner-form" id="plannerForm">
+
+                    <div class="form-group">
+
+                        <label for="destination">
+                            Destination
+                        </label>
+
+                        <div class="select-wrapper">
+
+                            <select id="destination" name="destination" required>
+                                <option value="" disabled selected>
+                                    Where are you exploring?
+                                </option>
+
+                                <option value="morocco">Morocco</option>
+                                <option value="china">China</option>
+                                <option value="nairobi">Nairobi</option>
+                                <option value="malaysia">Malaysia</option>
+                                <option value="dubai">Dubai</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="time">
+                            Available time
+                        </label>
+
+                        <div class="select-wrapper">
+
+                            <select id="time" name="time" required>
+                                <option value="" disabled selected>
+                                    How much time do you have?
+                                </option>
+
+                                <option value="1">1 Hour</option>
+                                <option value="2">2 Hours</option>
+                                <option value="4">Half Day</option>
+                                <option value="8">Full Day</option>
+                                <option value="weekend">Weekend</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="budget">
+                            Budget
+                        </label>
+
+                        <div class="select-wrapper">
+
+                            <select id="budget" name="budget" required>
+                                <option value="" disabled selected>
+                                    What feels comfortable?
+                                </option>
+
+                                <option value="low">Budget Friendly</option>
+                                <option value="medium">Moderate</option>
+                                <option value="high">Luxury</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <fieldset class="interest-group">
+
+                        <legend>
+                            Interests
+                        </legend>
+
+                        <div class="interest-options">
+
+                            <label class="interest-option">
+                                <input type="checkbox" name="interests" value="food">
+                                <span>Food</span>
+                            </label>
+
+                            <label class="interest-option">
+                                <input type="checkbox" name="interests" value="culture">
+                                <span>Culture</span>
+                            </label>
+
+                            <label class="interest-option">
+                                <input type="checkbox" name="interests" value="nature">
+                                <span>Nature</span>
+                            </label>
+
+                            <label class="interest-option">
+                                <input type="checkbox" name="interests" value="history">
+                                <span>History</span>
+                            </label>
+
+                            <label class="interest-option">
+                                <input type="checkbox" name="interests" value="shopping">
+                                <span>Shopping</span>
+                            </label>
+
+                            <label class="interest-option">
+                                <input type="checkbox" name="interests" value="photography">
+                                <span>Photography</span>
+                            </label>
+
+                            <label class="interest-option">
+                                <input type="checkbox" name="interests" value="hidden-gems">
+                                <span>Hidden gems</span>
+                            </label>
+
+                        </div>
+
+                    </fieldset>
+
+                    <p class="form-error" id="formError"></p>
+
+                    <button type="submit" class="planner-button">
+                        Create my itinerary
+                        <span>→</span>
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/script.js" defer></script>
+    <script src="js/discover.js" defer></script>
+
+</body>
+
+</html>
