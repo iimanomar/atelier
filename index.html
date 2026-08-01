@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Atelier</title>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <header class="navbar">
@@ -33,6 +35,11 @@
     </header>
 
     <main>
+
+        <!-- ===========================
+             HERO
+        ============================ -->
+
         <section class="hero">
 
             <img src="assets/images/hero-cafe.jpg" alt="A warm café with lights and people" class="hero-image">
@@ -40,49 +47,324 @@
             <div class="hero-overlay"></div>
 
             <div class="hero-content">
-                <p class="hero-tag">Curated Experiences</p>
 
-                <h1>Discover moments worth remembering.</h1>
+                <p class="hero-tag">
+                    Curated Experiences
+                </p>
+
+                <h1>
+                    Discover moments worth remembering.
+                </h1>
 
                 <p class="hero-description">
                     From hidden cafés to cultural landmarks, discover
                     experiences that become stories worth sharing.
                 </p>
 
-                <a href="discover.html" class="hero-button">
-                    Discover More
+                <a href="#destinations" class="hero-button">
+                    Explore Destinations
                 </a>
+
             </div>
 
         </section>
-    <section class="intro-section" id="discover">
-    
-        <div class="intro-copy">
-            <p class="section-label">Made for your moment</p>
-    
-            <h2>
-                Tell us where you are.<br>
-                We’ll plan what comes next.
-            </h2>
-    
-            <p class="intro-text">
-                Choose your destination, available time, budget and interests.
-                Atelier will create a simple itinerary designed around you.
-            </p>
-    
-            <a href="discover.html" class="intro-link">
-                Create your itinerary <span>→</span>
-            </a>
-        </div>
-    
-        <div class="intro-visual">
-            <span>01</span>
-            <p>Destination. Time. Budget. Interests.</p>
-        </div>
-    
-    </section>
+
+        <!-- ===========================
+             INTRO
+        ============================ -->
+
+        <section class="intro-section">
+
+            <div class="intro-copy">
+
+                <p class="section-label">
+                    Made for your moment
+                </p>
+
+                <h2>
+                    Tell us where you are.<br>
+                    We’ll plan what comes next.
+                </h2>
+
+                <p class="intro-text">
+                    Choose your destination, available time, budget and interests.
+                    Atelier will create a simple itinerary designed around you.
+                </p>
+
+                <a href="#destinations" class="intro-link">
+                    Continue exploring <span>↓</span>
+                </a>
+
+            </div>
+
+            <div class="intro-visual">
+
+                <span>01</span>
+
+                <p>
+                    Destination. Time. Budget. Interests.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ===========================
+             DESTINATIONS
+        ============================ -->
+
+        <section class="destinations-section" id="destinations">
+
+            <div class="destinations-heading">
+
+                <p class="section-label">
+                    Curated destinations
+                </p>
+
+                <h2>
+                    Begin somewhere beautiful.
+                </h2>
+
+                <p>
+                    Explore a small collection of destinations carefully chosen
+                    for memorable experiences.
+                </p>
+
+            </div>
+
+            <div class="destination-grid">
+
+                <a href="discover.html" class="destination-card destination-large">
+                    <img src="assets/images/morocco.jpg" alt="Morocco">
+
+                    <div class="destination-overlay"></div>
+
+                    <div class="destination-info">
+                        <span>01</span>
+                        <h3>Morocco</h3>
+                        <p>
+                            Medinas, mountain towns and hidden courtyards.
+                        </p>
+                    </div>
+                </a>
+
+                <a href="discover.html" class="destination-card">
+                    <img src="assets/images/malaysia.jpg" alt="Malaysia">
+
+                    <div class="destination-overlay"></div>
+
+                    <div class="destination-info">
+                        <span>02</span>
+                        <h3>Malaysia</h3>
+                        <p>
+                            Street food, city lights and tropical escapes.
+                        </p>
+                    </div>
+                </a>
+
+                <a href="discover.html" class="destination-card">
+                    <img src="assets/images/nairobi.jpg" alt="Nairobi">
+
+                    <div class="destination-overlay"></div>
+
+                    <div class="destination-info">
+                        <span>03</span>
+                        <h3>Nairobi</h3>
+                        <p>
+                            Nature, culture and creative city experiences.
+                        </p>
+                    </div>
+                </a>
+
+                <a href="discover.html" class="destination-card">
+                    <img src="assets/images/dubai.jpg" alt="Dubai">
+
+                    <div class="destination-overlay"></div>
+
+                    <div class="destination-info">
+                        <span>04</span>
+                        <h3>Dubai</h3>
+                        <p>
+                            Architecture, desert evenings and modern culture.
+                        </p>
+                    </div>
+                </a>
+
+                <a href="discover.html" class="destination-card destination-wide">
+                    <img src="assets/images/china.jpg" alt="China">
+
+                    <div class="destination-overlay"></div>
+
+                    <div class="destination-info">
+                        <span>05</span>
+                        <h3>China</h3>
+                        <p>
+                            Ancient traditions, food and unforgettable cities.
+                        </p>
+                    </div>
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- ===========================
+             HOW ATELIER WORKS
+        ============================ -->
+
+        <section class="how-section">
+
+            <div class="how-heading">
+
+                <p class="section-label">
+                    How Atelier works
+                </p>
+
+                <h2>
+                    A thoughtful journey,<br>
+                    planned around you.
+                </h2>
+
+            </div>
+
+            <div class="how-list">
+
+                <article class="how-step">
+
+                    <span class="how-number">
+                        01
+                    </span>
+
+                    <div class="how-icon">
+                        <img src="assets/icons/map-pin.svg" alt="" aria-hidden="true">
+                    </div>
+
+                    <div class="how-content">
+
+                        <h3>
+                            Choose your destination.
+                        </h3>
+
+                        <p>
+                            Select from Atelier’s curated destinations and begin
+                            with the place you are ready to explore.
+                        </p>
+
+                    </div>
+
+                </article>
+
+                <article class="how-step">
+
+                    <span class="how-number">
+                        02
+                    </span>
+
+                    <div class="how-icon">
+                        <img src="assets/icons/calendar-days.svg" alt="" aria-hidden="true">
+                    </div>
+
+                    <div class="how-content">
+
+                        <h3>
+                            Tell us your time and budget.
+                        </h3>
+
+                        <p>
+                            Whether you have one free hour, a full day or an
+                            entire weekend, Atelier plans within the time and
+                            budget you choose.
+                        </p>
+
+                    </div>
+
+                </article>
+
+                <article class="how-step">
+
+                    <span class="how-number">
+                        03
+                    </span>
+
+                    <div class="how-icon">
+                        <img src="assets/icons/compass.svg" alt="" aria-hidden="true">
+                    </div>
+
+                    <div class="how-content">
+
+                        <h3>
+                            Pick what interests you.
+                        </h3>
+
+                        <p>
+                            Choose from food, culture, nature, history, shopping,
+                            photography and hidden gems.
+                        </p>
+
+                    </div>
+
+                </article>
+
+                <article class="how-step">
+
+                    <span class="how-number">
+                        04
+                    </span>
+
+                    <div class="how-icon">
+                        <img src="assets/icons/map-pinned.svg" alt="" aria-hidden="true">
+                    </div>
+
+                    <div class="how-content">
+
+                        <h3>
+                            Receive your itinerary.
+                        </h3>
+
+                        <p>
+                            Atelier creates a simple personalised plan, giving
+                            you more time to experience your destination instead
+                            of searching through endless recommendations.
+                        </p>
+
+                    </div>
+
+                </article>
+
+                <article class="how-step">
+
+                    <span class="how-number">
+                        05
+                    </span>
+
+                    <div class="how-icon">
+                        <img src="assets/icons/camera.svg" alt="" aria-hidden="true">
+                    </div>
+
+                    <div class="how-content">
+
+                        <h3>
+                            Save your memories.
+                        </h3>
+
+                        <p>
+                            Capture your favourite photos, add personal notes
+                            and keep every journey inside your Atelier travel
+                            journal.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
     </main>
-    
-<script src="js/script.js" defer></script></body>
+
+    <script src="js/script.js" defer></script>
+
+</body>
 
 </html>
