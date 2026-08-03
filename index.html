@@ -2,17 +2,25 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Atelier</title>
 
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
+    <!-- ===========================
+         NAVIGATION
+    =========================== -->
+
     <header class="navbar">
+
         <div class="container nav-container">
 
             <a href="index.html" class="logo">
@@ -20,21 +28,47 @@
             </a>
 
             <nav>
+
                 <ul class="nav-links">
-                    <li><a href="discover.html">Discover</a></li>
-                    <li><a href="moments.html">Moments</a></li>
-                    <li><a href="about.html">About</a></li>
+
+                    <li>
+                        <a href="discover.html">
+                            Discover
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="moments.html">
+                            Moments
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+
                 </ul>
+
             </nav>
 
-            <a href="login.html" class="nav-button">
+            <a href="#" id="openSignIn" class="nav-button">
                 Sign In
             </a>
-
         </div>
+
     </header>
 
+
+
+    <!-- ===========================
+         MAIN
+    =========================== -->
+
     <main>
+
+        <!-- HERO -->
 
         <section class="hero">
 
@@ -53,17 +87,26 @@
                 </h1>
 
                 <p class="hero-description">
-                    Personal travel plans shaped around your destination,
-                    available time, interests and budget.
+
+                    Personal travel plans shaped around your
+                    destination, available time,
+                    interests and budget.
+
                 </p>
 
                 <a href="#start" class="hero-button">
+
                     Begin
+
                 </a>
 
             </div>
 
         </section>
+
+
+
+        <!-- HOME -->
 
         <section class="home-start" id="start">
 
@@ -74,30 +117,52 @@
                 </p>
 
                 <h2>
+
                     Tell us where you are.<br>
-                    We’ll plan what comes next.
+
+                    We'll plan what comes next.
+
                 </h2>
 
                 <p>
-                    Atelier turns your destination, time, budget and interests into one thoughtful itinerary without endless searching.
+
+                    Atelier turns your destination,
+                    time, budget and interests
+                    into one thoughtful itinerary
+                    without endless searching.
+
                 </p>
 
                 <a href="discover.html" class="start-button">
+
                     Start your journey
-                    <span aria-hidden="true">→</span>
+
+                    <span aria-hidden="true">
+                        →
+                    </span>
+
                 </a>
 
             </div>
 
+
+
             <div class="home-start-detail" aria-hidden="true">
 
-                <span>01</span>
+                <span>
+                    01
+                </span>
 
                 <p>
+
                     Destination.<br>
+
                     Time.<br>
+
                     Budget.<br>
+
                     Interests.
+
                 </p>
 
             </div>
@@ -105,8 +170,101 @@
         </section>
 
     </main>
+<!-- ==================================
+     SIGN IN MODAL
+================================== -->
 
-    <script src="js/script.js" defer></script>
+<div class="signin-overlay" id="signinOverlay">
+
+    <div class="signin-modal" id="signinModal">
+
+        <button class="close-signin" id="closeSignIn" type="button">
+
+            ×
+
+        </button>
+
+        <p class="signin-label">
+            Welcome back
+        </p>
+
+        <h2>
+            Your journal has been waiting.
+        </h2>
+
+        <p class="signin-copy">
+            Continue where your last journey ended.
+        </p>
+
+        <form id="signinForm">
+
+            <div class="signin-field">
+
+                <label for="signinEmail">
+                    Traveller Email
+                </label>
+
+                <input type="email" id="signinEmail" placeholder="you@example.com" required>
+
+            </div>
+
+
+            <div class="signin-field">
+
+                <label for="signinPassword">
+                    Passport Password
+                </label>
+
+                <input type="password" id="signinPassword" placeholder="Password" required>
+
+            </div>
+
+
+            <p class="signin-error" id="signinError">
+            </p>
+
+
+            <button class="signin-submit" id="signinSubmit" type="submit">
+
+                Enter Atelier →
+
+            </button>
+
+        </form>
+
+
+        <!-- Passport Reveal -->
+
+        <div class="passport-verify" id="passportVerify">
+
+            <div class="passport-circle">
+
+                <span>
+                    Atelier
+                </span>
+
+                <strong>
+                    VERIFIED
+                </strong>
+
+                <span>
+                    Welcome Back
+                </span>
+
+            </div>
+
+            <p>
+                Preparing your journal...
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="js/script.js" defer></script>
 
 </body>
 

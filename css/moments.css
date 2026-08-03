@@ -16,31 +16,39 @@ body {
    MOMENTS NAVIGATION
 =========================== */
 
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
+ .navbar {
+     position: fixed;
+     top: 0;
+     left: 0;
 
-    width: 100%;
-    z-index: 1000;
+     width: 100%;
+     z-index: 1000;
 
-    background: rgba(245, 238, 225, 0.82);
-    border-bottom: 1px solid rgba(124, 94, 52, 0.1);
+     background: transparent;
+     border-bottom: 1px solid transparent;
 
-    backdrop-filter: blur(32px) saturate(165%);
-    -webkit-backdrop-filter: blur(32px) saturate(165%);
+     backdrop-filter: blur(0);
+     -webkit-backdrop-filter: blur(0);
 
-    transition:
-        background 0.2s linear,
-        border-color 0.2s linear,
-        backdrop-filter 0.2s linear,
-        -webkit-backdrop-filter 0.2s linear;
-}
+     transition:
+         background 0.35s ease,
+         border-color 0.35s ease,
+         backdrop-filter 0.35s ease,
+         -webkit-backdrop-filter 0.35s ease,
+         box-shadow 0.35s ease;
+ }
 
-.navbar.scrolled {
-    background: rgba(245, 238, 225, 0.96);
-    border-bottom-color: rgba(124, 94, 52, 0.16);
-}
+ .navbar.scrolled {
+     background: rgba(245, 238, 225, 0.92);
+
+     border-bottom: 1px solid rgba(124, 94, 52, 0.12);
+
+     backdrop-filter: blur(28px) saturate(160%);
+     -webkit-backdrop-filter: blur(28px) saturate(160%);
+
+     box-shadow:
+         0 12px 35px rgba(71, 52, 29, 0.08);
+ }
 
 .nav-container {
     width: 100%;
