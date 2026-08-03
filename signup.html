@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/signup.css">
 </head>
 
-<body>
+<body class="signup-page-body">
 
     <!-- ===========================
          NAVIGATION
@@ -55,26 +55,35 @@
 
     <main class="signup-page">
 
-        <!-- Decorative photographs -->
+        <!-- ===========================
+             DECORATIVE PHOTOGRAPHS
+        =========================== -->
 
         <figure class="signup-photo signup-photo-left">
-            <img src="assets/images/morocco.jpg" alt="" aria-hidden="true">
+
+            <img src="assets/images/istanbul.jpg" alt="" aria-hidden="true">
 
             <figcaption>
-                Marrakech
+                Follow the light.
             </figcaption>
+
         </figure>
+
 
         <figure class="signup-photo signup-photo-right">
-            <img src="assets/images/china.jpg" alt="" aria-hidden="true">
+
+            <img src="assets/images/malaysia.jpg" alt="" aria-hidden="true">
 
             <figcaption>
-                Guangzhou
+                Somewhere new.
             </figcaption>
+
         </figure>
 
 
-        <!-- Main layout -->
+        <!-- ===========================
+             MAIN SIGNUP LAYOUT
+        =========================== -->
 
         <section class="signup-layout">
 
@@ -88,16 +97,24 @@
                     Begin your Atelier.
                 </h1>
 
-                <p>
+                <p class="signup-introduction-copy">
                     Save the journeys you plan, the places you discover and
                     the memories you never want to lose.
                 </p>
 
                 <div class="signup-features">
 
-                    <span>Save every journey</span>
-                    <span>Build personal albums</span>
-                    <span>Keep private notes</span>
+                    <span>
+                        Save every journey
+                    </span>
+
+                    <span>
+                        Build personal albums
+                    </span>
+
+                    <span>
+                        Keep private notes
+                    </span>
 
                 </div>
 
@@ -106,7 +123,9 @@
 
             <div class="signup-card" id="signupCard">
 
-                <!-- SIGNUP FORM -->
+                <!-- ===========================
+                     FORM VIEW
+                =========================== -->
 
                 <div class="signup-form-view" id="signupFormView">
 
@@ -134,7 +153,7 @@
                                 </label>
 
                                 <input type="text" id="firstName" name="firstName" autocomplete="given-name"
-                                    placeholder="Ahlam" required>
+                                    placeholder="First name" required>
 
                             </div>
 
@@ -146,7 +165,7 @@
                                 </label>
 
                                 <input type="text" id="lastName" name="lastName" autocomplete="family-name"
-                                    placeholder="Omar" required>
+                                    placeholder="Last name" required>
 
                             </div>
 
@@ -209,17 +228,21 @@
 
 
                     <p class="login-prompt">
+
                         Already have an account?
 
                         <a href="login.html">
                             Sign in
                         </a>
+
                     </p>
 
                 </div>
 
 
-                <!-- SUCCESS / EASTER EGG -->
+                <!-- ===========================
+                     SUCCESS EASTER EGG
+                =========================== -->
 
                 <div class="signup-success" id="signupSuccess" aria-hidden="true">
 
@@ -227,16 +250,17 @@
                         Passport issued
                     </p>
 
+
                     <div class="passport">
 
                         <div class="passport-header">
 
                             <span>
-                                ATELIER
+                                Atelier
                             </span>
 
                             <span>
-                                TRAVEL ARCHIVE
+                                Private Travel Archive
                             </span>
 
                         </div>
@@ -252,16 +276,32 @@
                                 Traveller.
                             </h2>
 
+
                             <div class="passport-details">
 
                                 <div>
-                                    <span>Member since</span>
-                                    <strong id="memberDate">—</strong>
+
+                                    <span>
+                                        Member since
+                                    </span>
+
+                                    <strong id="memberDate">
+                                        —
+                                    </strong>
+
                                 </div>
 
+
                                 <div>
-                                    <span>First stamp</span>
-                                    <strong id="firstDestination">—</strong>
+
+                                    <span>
+                                        First destination
+                                    </span>
+
+                                    <strong id="firstDestination">
+                                        —
+                                    </strong>
+
                                 </div>
 
                             </div>
@@ -272,15 +312,15 @@
                         <div class="passport-stamp" id="passportStamp">
 
                             <span>
-                                ATELIER
+                                Atelier
                             </span>
 
                             <strong>
-                                APPROVED
+                                Approved
                             </strong>
 
                             <span>
-                                BEGIN THE JOURNEY
+                                Begin the journey
                             </span>
 
                         </div>
@@ -291,6 +331,7 @@
                     <p class="success-message">
                         Your archive is ready. Your next memory is waiting.
                     </p>
+
 
                     <a href="discover.html" class="continue-button">
                         Discover your first journey
@@ -306,6 +347,7 @@
 
         <div class="confetti-container" id="confettiContainer" aria-hidden="true"></div>
 
+
         <div class="paper-plane" id="paperPlane" aria-hidden="true">
             ✈
         </div>
@@ -313,7 +355,8 @@
     </main>
 
 
-    <script src="js/script.js"></script>
+    <!-- Do not load js/script.js on this page -->
+
     <script src="js/signup.js"></script>
 
 </body>
