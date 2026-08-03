@@ -1,7 +1,7 @@
 const plannerForm = document.getElementById("plannerForm");
 const formError = document.getElementById("formError");
 
-if (plannerForm) {
+if (plannerForm && formError) {
     plannerForm.addEventListener("submit", (event) => {
         event.preventDefault();
 
@@ -32,7 +32,7 @@ if (plannerForm) {
         };
 
         localStorage.setItem(
-            "atelierItinerary",
+            "atelierPreferences",
             JSON.stringify(itineraryDetails)
         );
 

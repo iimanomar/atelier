@@ -1,0 +1,870 @@
+/* ===========================
+   EXPERIENCE HERO
+=========================== */
+
+.experience-hero {
+    position: relative;
+    min-height: 100vh;
+    padding: 10rem 8% 6rem;
+
+    display: flex;
+    align-items: flex-end;
+
+    overflow: hidden;
+    isolation: isolate;
+
+    background: var(--background);
+}
+.experience-background {
+    position: absolute;
+    inset: 0;
+
+    z-index: -3;
+
+    background-image: url("../assets/images/morocco.jpg");
+    background-size: cover;
+
+    /* moves the visible part lower */
+    background-position: center 90%;
+
+    /* less dull */
+    filter: saturate(0.95) contrast(1.04);
+
+    /* remove the slight softening caused by scaling */
+    transform: scale(1);
+}
+
+.experience-overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: -2;
+
+    background:
+        linear-gradient(90deg,
+            rgba(5, 11, 8, 0.82) 0%,
+            rgba(5, 11, 8, 0.5) 48%,
+            rgba(5, 11, 8, 0.08) 100%),
+        linear-gradient(to bottom,
+            rgba(5, 11, 8, 0.06) 0%,
+            rgba(5, 11, 8, 0.2) 62%,
+            rgba(5, 11, 8, 0.68) 100%);
+}
+.experience-hero::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 180px;
+
+    z-index: -1;
+
+    background: linear-gradient(to bottom,
+            transparent,
+            var(--forest));
+}
+
+.experience-hero-content {
+    max-width: 1000px;
+}
+
+.experience-hero h1 {
+    max-width: 950px;
+    margin-bottom: 1.8rem;
+
+    font-family: var(--heading-font);
+    font-size: clamp(4rem, 7vw, 7rem);
+    font-weight: 400;
+    line-height: 0.96;
+    letter-spacing: -0.03em;
+}
+
+.experience-hero-content>p:not(.section-label) {
+    max-width: 600px;
+    margin-bottom: 2rem;
+
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.9;
+
+    color: rgba(243, 245, 240, 0.78);
+}
+
+.journey-details {
+    margin-bottom: 2.5rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.journey-details span {
+    padding: 0.7rem 1rem;
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 999px;
+
+    background: rgba(8, 16, 12, 0.28);
+    color: rgba(243, 245, 240, 0.82);
+
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.journey-scroll-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    color: var(--sage);
+
+    transition: var(--transition);
+}
+
+.journey-scroll-link:hover {
+    color: var(--gold);
+}
+
+.journey-scroll-link span {
+    transition: transform var(--transition);
+}
+
+.journey-scroll-link:hover span {
+    transform: translateY(5px);
+}
+/* ===========================
+   ITINERARY SECTION
+=========================== */
+
+.itinerary-section {
+    padding: 11rem 8%;
+
+    background:
+        linear-gradient(to bottom,
+            var(--forest),
+            var(--background));
+}
+
+.itinerary-top {
+    margin-bottom: 6rem;
+
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.45fr) minmax(280px, 0.55fr);
+
+    align-items: start;
+    gap: 6rem;
+}
+
+.journey-sidebar {
+    position: sticky;
+    top: 7rem;
+}
+
+.itinerary-heading {
+    max-width: 850px;
+    min-width: 0;
+}
+
+.itinerary-heading h2 {
+    margin-bottom: 1.5rem;
+
+    font-family: var(--heading-font);
+    font-size: clamp(3.8rem, 6vw, 6.3rem);
+    font-weight: 400;
+    line-height: 0.98;
+    letter-spacing: -0.03em;
+}
+
+.itinerary-heading>p:not(.section-label) {
+    max-width: 600px;
+
+    font-weight: 300;
+    line-height: 1.9;
+
+    color: var(--muted);
+}
+/* ===========================
+   EDITORIAL ITINERARY COLLAGE
+=========================== */
+
+.itinerary-collage-wrapper {
+    width: 100%;
+    min-width: 0;
+}
+
+.itinerary-collage {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    align-items: start;
+    gap: 1rem;
+}
+
+/* ===========================
+   COLLAGE CARD
+=========================== */
+
+.collage-card {
+    position: relative;
+
+    width: 100%;
+    min-width: 0;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 22px;
+
+    background: #0a110e;
+
+    isolation: isolate;
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.collage-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(200, 169, 116, 0.45);
+
+    box-shadow:
+        0 22px 55px rgba(0, 0, 0, 0.28);
+}
+
+/* ===========================
+   IMAGE AREA
+=========================== */
+
+.collage-image-wrapper {
+    position: relative;
+
+    width: 100%;
+    height: clamp(280px, 31vw, 460px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: #0a110e;
+}
+
+/* Blurred copy of the same image fills empty space */
+
+.collage-blur-image {
+    position: absolute;
+    inset: -2rem;
+
+    z-index: 0;
+
+    width: calc(100% + 4rem);
+    height: calc(100% + 4rem);
+
+    object-fit: cover;
+    object-position: center;
+
+    filter:
+        blur(24px) saturate(1) brightness(0.68);
+
+    transform: scale(1.12);
+    opacity: 0.9;
+
+    pointer-events: none;
+}
+
+/* Soft edge fade around the full image */
+
+.collage-image-wrapper::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(90deg,
+            rgba(5, 11, 8, 0.28) 0%,
+            transparent 18%,
+            transparent 82%,
+            rgba(5, 11, 8, 0.28) 100%);
+
+    pointer-events: none;
+}
+
+.collage-image {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+    object-position: center;
+
+    transition:
+        transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
+        filter 0.5s ease;
+}
+
+.collage-card:hover .collage-image {
+    transform: scale(1.02);
+    filter: brightness(0.72);
+}
+
+/* ===========================
+   IMAGE OVERLAY
+=========================== */
+
+.collage-overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: 3;
+
+    padding: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    background:
+        linear-gradient(to top,
+            rgba(5, 11, 8, 0.96) 0%,
+            rgba(5, 11, 8, 0.58) 32%,
+            rgba(5, 11, 8, 0.08) 66%,
+            transparent 100%);
+
+    pointer-events: none;
+}
+
+.collage-topline {
+    position: absolute;
+    top: 1.1rem;
+    left: 1.1rem;
+    right: 1.1rem;
+
+    z-index: 4;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.collage-time,
+.collage-duration {
+    padding: 0.48rem 0.75rem;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+
+    background: rgba(5, 11, 8, 0.52);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: var(--text);
+}
+
+/* ===========================
+   CARD INFORMATION
+=========================== */
+
+.collage-content {
+    position: relative;
+
+    z-index: 4;
+
+    transform: translateY(2.3rem);
+
+    transition: transform 0.45s ease;
+}
+
+.collage-card:hover .collage-content {
+    transform: translateY(0);
+}
+
+.collage-content h3 {
+    max-width: 95%;
+    margin: 0;
+
+    font-family: var(--heading-font);
+    font-size: clamp(1.9rem, 2.5vw, 3rem);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.025em;
+
+    color: var(--text);
+}
+
+.collage-description {
+    max-width: 520px;
+    max-height: 0;
+    margin: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+    transform: translateY(0.7rem);
+
+    font-size: 0.82rem;
+    font-weight: 300;
+    line-height: 1.65;
+
+    color: rgba(243, 245, 240, 0.76);
+
+    transition:
+        max-height 0.45s ease,
+        margin 0.45s ease,
+        opacity 0.35s ease,
+        transform 0.45s ease;
+}
+
+.collage-card:hover .collage-description {
+    max-height: 8rem;
+    margin-top: 0.8rem;
+
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.collage-meta {
+    margin-top: 0.8rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+
+    opacity: 0.85;
+}
+
+.collage-meta span {
+    font-size: 0.58rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+
+    color: var(--sage);
+}
+
+.collage-meta span:not(:last-child)::after {
+    content: "·";
+
+    margin-left: 0.55rem;
+
+    color: rgba(200, 169, 116, 0.7);
+}
+
+/* ===========================
+   DESKTOP COLLAGE PATTERN
+=========================== */
+
+.collage-card:nth-child(4n + 1) {
+    grid-column: span 6;
+}
+
+.collage-card:nth-child(4n + 2) {
+    grid-column: span 6;
+}
+
+.collage-card:nth-child(4n + 3) {
+    grid-column: span 7;
+}
+
+.collage-card:nth-child(4n + 4) {
+    grid-column: span 5;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 1000px) {
+    .itinerary-collage {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: none;
+        gap: 1rem;
+    }
+
+    .collage-card,
+    .collage-card:nth-child(4n + 1),
+    .collage-card:nth-child(4n + 2),
+    .collage-card:nth-child(4n + 3),
+    .collage-card:nth-child(4n + 4) {
+        grid-column: span 1;
+    }
+
+    .collage-image-wrapper {
+        height: clamp(260px, 44vw, 430px);
+    }
+}
+
+@media (max-width: 760px) {
+    .itinerary-collage {
+        grid-template-columns: 1fr;
+    }
+
+    .collage-image-wrapper {
+        height: auto;
+        min-height: 320px;
+        max-height: none;
+    }
+
+    .collage-image {
+        height: auto;
+        max-height: 620px;
+    }
+
+    .collage-overlay {
+        padding: 1.25rem;
+    }
+
+    .collage-topline {
+        top: 1rem;
+        left: 1rem;
+        right: 1rem;
+    }
+
+    .collage-content {
+        transform: translateY(0);
+    }
+
+    .collage-description {
+        max-height: 8rem;
+        margin-top: 0.7rem;
+
+        opacity: 1;
+        transform: none;
+    }
+
+    .collage-content h3 {
+        font-size: clamp(2rem, 10vw, 3rem);
+    }
+}
+/* ===========================
+   SIDEBAR
+=========================== */
+
+.journey-sidebar {
+    position: sticky;
+    top: 7rem;
+}
+
+.journey-card {
+    padding: 2.3rem;
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+
+    background: rgba(255, 255, 255, 0.02);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.journey-card-label {
+    margin-bottom: 2rem;
+
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+    color: var(--sage);
+}
+
+.journey-stat {
+    padding: 1.3rem 0;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.journey-stat span {
+    font-size: 0.76rem;
+
+    color: var(--muted);
+}
+
+.journey-stat strong {
+    font-size: 0.78rem;
+    font-weight: 400;
+
+    text-align: right;
+
+    color: var(--text);
+}
+
+.edit-journey-link {
+    margin-top: 1.5rem;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: var(--sage);
+
+    transition: var(--transition);
+}
+
+.edit-journey-link:hover {
+    color: var(--gold);
+}
+
+/* ===========================
+   SAVE SECTION
+=========================== */
+
+.save-journey-section {
+    min-height: 75vh;
+    padding: 10rem 8%;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(135deg,
+            #0d1a14,
+            var(--background));
+}
+
+.save-journey-copy {
+    max-width: 900px;
+}
+
+.save-journey-copy h2 {
+    max-width: 900px;
+    margin-bottom: 1.8rem;
+
+    font-family: var(--heading-font);
+    font-size: clamp(3.8rem, 6vw, 6.3rem);
+    font-weight: 400;
+    line-height: 0.98;
+    letter-spacing: -0.03em;
+}
+
+.save-journey-copy>p:not(.section-label, .save-message) {
+    max-width: 620px;
+    margin-bottom: 2.7rem;
+
+    font-weight: 300;
+    line-height: 1.9;
+
+    color: var(--muted);
+}
+
+.save-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+.save-button,
+.account-link,
+.empty-state-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 0.9rem 1.5rem;
+
+    border: 1px solid rgba(200, 169, 116, 0.46);
+    border-radius: 999px;
+
+    background: transparent;
+    color: var(--sage);
+
+    font-family: var(--body-font);
+    font-size: 0.74rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+.save-button:hover,
+.empty-state-button:hover {
+    border-color: var(--gold);
+
+    background: rgba(200, 169, 116, 0.08);
+    color: var(--gold);
+}
+
+.account-link {
+    border-color: transparent;
+}
+
+.account-link:hover {
+    color: var(--gold);
+}
+
+.save-message {
+    min-height: 1.5rem;
+    margin-top: 1.5rem;
+
+    font-size: 0.85rem;
+
+    color: var(--sage);
+}
+
+/* ===========================
+   EMPTY STATE
+=========================== */
+
+.empty-state {
+    min-height: 100vh;
+    padding: 10rem 8%;
+
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    background: var(--forest);
+}
+
+.empty-state h2 {
+    max-width: 800px;
+    margin-bottom: 1.5rem;
+
+    font-family: var(--heading-font);
+    font-size: clamp(4rem, 7vw, 7rem);
+    font-weight: 400;
+    line-height: 0.96;
+}
+
+.empty-state>p:not(.section-label) {
+    max-width: 580px;
+    margin-bottom: 2.5rem;
+
+    font-weight: 300;
+    line-height: 1.9;
+
+    color: var(--muted);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 1000px) {
+
+    .experience-hero,
+    .itinerary-section,
+    .save-journey-section {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .itinerary-layout {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .journey-sidebar {
+        position: static;
+    }
+}
+
+@media (max-width: 700px) {
+    .experience-hero {
+        min-height: 100svh;
+        padding: 8rem 5% 5rem;
+    }
+
+    .experience-hero h1 {
+        font-size: clamp(3.5rem, 15vw, 5rem);
+    }
+
+    .itinerary-section,
+    .save-journey-section {
+        padding: 8rem 5%;
+    }
+
+    .itinerary-item {
+        padding-left: 3.5rem;
+
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .itinerary-item::before {
+        left: 0.8rem;
+    }
+
+    .timeline-marker {
+        left: -0.25rem;
+    }
+
+    .itinerary-time {
+        padding-top: 0;
+    }
+
+    .save-actions {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}.itinerary-reason {
+    max-width: 720px;
+    margin-top: 1.8rem;
+    padding: 1.4rem 1.6rem;
+
+    border-left: 1px solid rgba(200, 169, 116, 0.5);
+
+    background: rgba(200, 169, 116, 0.035);
+}
+
+.itinerary-reason span {
+    display: block;
+    margin-bottom: 0.6rem;
+
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+
+    color: var(--gold);
+}
+
+.itinerary-reason p {
+    margin: 0;
+
+    font-size: 0.92rem;
+    line-height: 1.7;
+
+    color: rgba(243, 245, 240, 0.7);
+}

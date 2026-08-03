@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Journey | Atelier</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/experience.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                Atelier
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="moments.html">Moments</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+
+            <a href="login.html" class="nav-button">
+                Sign In
+            </a>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="experience-hero">
+
+            <div class="experience-background" id="experienceBackground"></div>
+
+            <div class="experience-overlay"></div>
+
+            <div class="experience-hero-content">
+
+                <p class="section-label">
+                    Your Atelier itinerary
+                </p>
+
+                <h1 id="journeyTitle">
+                    Your journey is being prepared.
+                </h1>
+
+                <p id="journeySummary">
+                    Atelier is selecting experiences based on your choices.
+                </p>
+
+                <div class="journey-details">
+
+                    <span id="journeyTime">Time</span>
+                    <span id="journeyBudget">Budget</span>
+                    <span id="journeyInterests">Interests</span>
+
+                </div>
+
+                <a href="#itinerary" class="journey-scroll-link">
+                    View your itinerary
+                    <span>↓</span>
+                </a>
+
+            </div>
+
+        </section>
+
+<section class="itinerary-section" id="itinerary">
+    
+        <div class="itinerary-top">
+    
+            <div class="itinerary-heading">
+    
+                <p class="section-label">
+                    Designed around your day
+                </p>
+    
+                <h2>
+                    Your personalised itinerary.
+                </h2>
+    
+                <p id="itineraryIntro">
+                    A collection of experiences selected for you.
+                </p>
+    
+                <div class="itinerary-reason" id="itineraryReason"></div>
+    
+            </div>
+    
+            <aside class="journey-sidebar">
+    
+                <div class="journey-card">
+    
+                    <p class="journey-card-label">
+                        Journey overview
+                    </p>
+    
+                    <div class="journey-stat">
+                        <span>Destination</span>
+                        <strong id="sidebarDestination">—</strong>
+                    </div>
+    
+                    <div class="journey-stat">
+                        <span>Available time</span>
+                        <strong id="sidebarTime">—</strong>
+                    </div>
+    
+                    <div class="journey-stat">
+                        <span>Budget</span>
+                        <strong id="sidebarBudget">—</strong>
+                    </div>
+    
+                    <div class="journey-stat">
+                        <span>Stops</span>
+                        <strong id="sidebarStops">—</strong>
+                    </div>
+    
+                </div>
+    
+                <a href="activity.html" class="edit-journey-link">
+                    Edit your choices
+                    <span>↗</span>
+                </a>
+    
+            </aside>
+    
+        </div>
+    
+        <div class="itinerary-collage-wrapper">
+    
+            <div class="itinerary-collage" id="itineraryTimeline">
+                <!-- JavaScript builds the collage here -->
+            </div>
+    
+        </div>
+    
+    </section>
+
+        <section class="save-journey-section">
+
+            <div class="save-journey-copy">
+
+                <p class="section-label">
+                    Keep this journey
+                </p>
+
+                <h2>
+                    Save the places that become part of your story.
+                </h2>
+
+                <p>
+                    Create an Atelier account to save this itinerary,
+                    add photographs and keep personal notes from your journey.
+                </p>
+
+                <div class="save-actions">
+
+                    <button type="button" class="save-button" id="saveJourneyButton">
+                        Save this journey
+                        <span>♡</span>
+                    </button>
+
+                    <a href="signup.html" class="account-link">
+                        Create an account
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+                <p class="save-message" id="saveMessage"></p>
+
+            </div>
+
+        </section>
+
+        <section class="empty-state" id="emptyState">
+
+            <p class="section-label">
+                No journey found
+            </p>
+
+            <h2>
+                Let’s plan something beautiful.
+            </h2>
+
+            <p>
+                Return to the planner and choose your destination,
+                available time, budget and interests.
+            </p>
+
+            <a href="activity.html" class="empty-state-button">
+                Start planning
+                <span>→</span>
+            </a>
+
+        </section>
+
+    </main>
+
+    <script src="js/script.js" defer></script>
+    <script src="js/experience.js" defer></script>
+
+</body>
+
+</html>
