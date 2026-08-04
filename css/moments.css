@@ -405,7 +405,19 @@ body {
         0 0 14px rgba(248, 241, 230, 0.86),
         0 0 24px rgba(248, 241, 230, 0.68);
 }
+.journal-label {
+    margin-bottom: 1.4rem;
 
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.45rem;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+
+    color: rgba(92, 70, 43, 0.68);
+
+    transform: rotate(-1.5deg);
+}
 .hero-description {
     max-width: 650px;
     margin: 0 auto 2.5rem;
