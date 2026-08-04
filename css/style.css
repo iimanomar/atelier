@@ -649,25 +649,26 @@ nav {
 /* ===========================
    RESPONSIVE — TABLET
 =========================== */
-
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
     .nav-container {
+        height: 68px;
         padding-inline: 2rem;
     }
 
     .nav-links {
-        gap: 2.5rem;
+        gap: 2.2rem;
     }
 
-    .hero {
-        padding-inline: 6%;
+    .logo {
+        font-size: 1.6rem;
     }
 
-    .home-start {
-        padding-inline: 6%;
-        gap: 4rem;
+    .nav-links a {
+        font-size: 0.64rem;
+    }
 
-        grid-template-columns: minmax(0, 1.2fr) minmax(230px, 0.8fr);
+    .nav-button {
+        font-size: 0.66rem;
     }
 }
 
@@ -1454,30 +1455,26 @@ nav {
 }
 
 .about-container::after {
-    content:
-        "Every journey begins with curiosity.";
+    content: "— Every journey begins with curiosity.";
 
     display: block;
+    width: fit-content;
 
     margin-top: 2.7rem;
+    margin-left: auto;
 
     font-size: 0.68rem;
     letter-spacing: 0.22em;
     text-transform: uppercase;
+    text-align: right;
 
     color: rgba(200, 169, 116, 0);
 
     transform: translateY(8px);
 
     transition:
-        color 0.55s ease,
-        transform 0.55s ease;
-}
-
-.about-container:hover::after {
-    color: rgba(200, 169, 116, 0.55);
-
-    transform: translateY(0);
+        color .55s ease,
+        transform .55s ease;
 }
 
 
@@ -1489,114 +1486,4 @@ nav {
     .about-features {
         grid-template-columns: 1fr;
         gap: 3rem;
-    }
-}
-
-/* ==================================
-   SECRET EASTER EGG
-================================== */
-
-.about-container:hover .about-label {
-
-    letter-spacing: .45em;
-
-}
-
-.about-container:hover::after {
-
-    content: "Every journey begins with curiosity.";
-
-    position: absolute;
-
-    bottom: -45px;
-    left: 0;
-
-    font-size: .72rem;
-
-    letter-spacing: .22em;
-    text-transform: uppercase;
-
-    color: rgba(200, 169, 116, .55);
-
-    animation: fadeIn .6s ease;
-
-}
-
-/* ==================================
-   ANIMATIONS
-================================== */
-
-@keyframes fadeIn {
-
-    from {
-
-        opacity: 0;
-        transform: translateY(10px);
-
-    }
-
-    to {
-
-        opacity: 1;
-        transform: translateY(0);
-
-    }
-
-}
-
-@keyframes twinkle {
-
-    0% {
-
-        opacity: .2;
-        transform: scale(.9);
-
-    }
-
-    50% {
-
-        opacity: 1;
-        transform: scale(1.15);
-
-    }
-
-    100% {
-
-        opacity: .2;
-        transform: scale(.9);
-
-    }
-
-}
-
-/* ==================================
-   RESPONSIVE
-================================== */
-
-@media (max-width:900px) {
-
-    .about-section {
-
-        padding: 6rem 2rem;
-
-    }
-
-    .about-features {
-
-        grid-template-columns: 1fr;
-
-        gap: 3rem;
-
-    }
-
-    .about-container:hover::after {
-
-        position: static;
-
-        display: block;
-
-        margin-top: 2rem;
-
-    }
-
-}
+    }}
