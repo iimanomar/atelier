@@ -9,6 +9,8 @@ const pageHero =
 
 const isMomentsPage =
     Boolean(document.querySelector(".moments-hero"));
+const isMemoryPage =
+    Boolean(document.querySelector(".memory-hero"));
 
 function updateNavbar() {
     if (!navbar) {
@@ -29,6 +31,29 @@ function updateNavbar() {
         border: "255, 255, 255",
         shadow: "0, 0, 0"
     };
+    if (isMemoryPage) {
+        navbar.style.background =
+            window.scrollY > 30
+                ? "rgba(245, 238, 225, 0.92)"
+                : "transparent";
+
+        navbar.style.backdropFilter =
+            window.scrollY > 30
+                ? "blur(28px) saturate(160%)"
+                : "blur(0)";
+
+        navbar.style.webkitBackdropFilter =
+            window.scrollY > 30
+                ? "blur(28px) saturate(160%)"
+                : "blur(0)";
+
+        navbar.style.borderBottom =
+            window.scrollY > 30
+                ? "1px solid rgba(124, 94, 52, 0.12)"
+                : "1px solid transparent";
+
+        return;
+    }
     if (!pageHero) {
         navbar.style.background =
             `rgba(

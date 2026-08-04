@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Memory | Atelier</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/memory.css">
+</head>
+
+<body class="memory-page-body">
+
+    <!-- ===========================
+         NAVIGATION
+    =========================== -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                Atelier
+            </a>
+
+            <nav>
+                <div class="nav-links">
+
+                    <a href="discover.html">
+                        Discover
+                    </a>
+
+                    <a href="moments.html" class="active">
+                        Moments
+                    </a>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                </div>
+            </nav>
+
+            <a href="moments.html" class="nav-button">
+                Back to journal
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- ===========================
+             MEMORY HERO
+        =========================== -->
+
+        <section class="memory-hero">
+
+            <img src="assets/images/morocco.jpg" alt="" class="memory-hero-image" id="memoryHeroImage">
+
+            <div class="memory-hero-overlay"></div>
+
+            <div class="memory-hero-content">
+
+                <p class="memory-label">
+                    Your private journal
+                </p>
+
+                <h1 id="memoryTitle">
+                    Your journey
+                </h1>
+
+                <div class="memory-meta">
+
+                    <span id="memoryDate">
+                        Saved journey
+                    </span>
+
+                    <span aria-hidden="true">
+                        ·
+                    </span>
+
+                    <span id="memoryPlaceCount">
+                        0 places
+                    </span>
+
+                </div>
+
+                <a href="#memoryJournal" class="memory-scroll-link">
+                    Open this memory
+                    <span>↓</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ===========================
+             JOURNAL
+        =========================== -->
+
+        <section class="memory-journal" id="memoryJournal">
+
+            <div class="memory-section-heading">
+
+                <div>
+
+                    <p class="memory-label">
+                        Written by you
+                    </p>
+
+                    <h2>
+                        How did it feel?
+                    </h2>
+
+                </div>
+
+                <p>
+                    Add the details that photographs cannot hold.
+                    Your notes save automatically on this device.
+                </p>
+
+            </div>
+
+
+            <div class="journal-paper">
+
+                <label for="memoryNotes">
+                    My journal
+                </label>
+
+                <textarea id="memoryNotes"
+                    placeholder="Write about the little details you do not want to forget..."></textarea>
+
+                <p class="autosave-message" id="autosaveMessage">
+                    Saved automatically
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ===========================
+             PERSONAL PHOTOS
+        =========================== -->
+
+        <section class="memory-photos">
+
+            <div class="memory-section-heading">
+
+                <div>
+
+                    <p class="memory-label">
+                        Your photographs
+                    </p>
+
+                    <h2>
+                        The moments that became yours.
+                    </h2>
+
+                </div>
+
+                <p>
+                    Add photographs from your device and turn this
+                    journey into a personal album.
+                </p>
+
+            </div>
+
+
+            <div class="photo-upload-bar">
+
+                <label for="photoUpload" class="photo-upload-button">
+                    Add photographs
+                    <span>＋</span>
+                </label>
+
+                <input type="file" id="photoUpload" accept="image/*" multiple hidden>
+
+                <span class="photo-upload-note">
+                    JPG, PNG or WEBP
+                </span>
+
+            </div>
+
+
+            <div class="memory-photo-grid" id="memoryPhotoGrid">
+
+                <div class="photo-empty-state" id="photoEmptyState">
+
+                    <span>
+                        01
+                    </span>
+
+                    <h3>
+                        Your first photograph is waiting.
+                    </h3>
+
+                    <p>
+                        Choose a photograph from your device to begin
+                        building this memory.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ===========================
+             HIGHLIGHTS
+        =========================== -->
+
+        <section class="memory-highlights">
+
+            <div class="memory-section-heading">
+
+                <div>
+
+                    <p class="memory-label">
+                        The details
+                    </p>
+
+                    <h2>
+                        What made this journey special?
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="highlight-grid">
+
+                <article class="highlight-card rating-card">
+
+                    <span class="highlight-number">
+                        01
+                    </span>
+
+                    <label>
+                        Your rating
+                    </label>
+
+                    <div class="rating-buttons" id="ratingButtons">
+
+                        <button type="button" data-rating="1">★</button>
+                        <button type="button" data-rating="2">★</button>
+                        <button type="button" data-rating="3">★</button>
+                        <button type="button" data-rating="4">★</button>
+                        <button type="button" data-rating="5">★</button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="highlight-card">
+
+                    <span class="highlight-number">
+                        02
+                    </span>
+
+                    <label for="favouritePlace">
+                        Favourite place
+                    </label>
+
+                    <input type="text" id="favouritePlace" placeholder="The place you would return to">
+
+                </article>
+
+
+                <article class="highlight-card">
+
+                    <span class="highlight-number">
+                        03
+                    </span>
+
+                    <label for="favouriteMoment">
+                        Favourite moment
+                    </label>
+
+                    <input type="text" id="favouriteMoment" placeholder="The moment that stayed with you">
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ===========================
+             DO NOT FORGET
+        =========================== -->
+
+        <section class="memory-list-section">
+
+            <div class="memory-section-heading">
+
+                <div>
+
+                    <p class="memory-label">
+                        Keep the little things
+                    </p>
+
+                    <h2>
+                        Things I do not want to forget.
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="memory-list-paper">
+
+                <form id="memoryListForm">
+
+                    <input type="text" id="memoryListInput" placeholder="Mint tea on the rooftop..." autocomplete="off">
+
+                    <button type="submit">
+                        Add detail
+                        <span>→</span>
+                    </button>
+
+                </form>
+
+
+                <ul class="memory-list" id="memoryList"></ul>
+
+                <p class="memory-list-empty" id="memoryListEmpty">
+                    Add the first small detail from your journey.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ===========================
+             CLOSING
+        =========================== -->
+
+        <section class="memory-closing">
+
+            <p class="memory-label">
+                Continue the story
+            </p>
+
+            <h2>
+                Every journey leaves something behind.
+            </h2>
+
+            <a href="moments.html">
+                Return to your journal
+                <span>↗</span>
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/script.js" defer></script>
+    <script src="js/memory.js" defer></script>
+
+</body>
+
+</html>
