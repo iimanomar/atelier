@@ -211,10 +211,6 @@ body {
         grid-template-columns: 1fr auto;
     }
 
-    .nav-container nav {
-        display: none;
-    }
-
     .logo {
         font-size: 1.5rem;
     }
@@ -1544,67 +1540,35 @@ body {
         align-items: flex-start;
         flex-direction: column;
     }
-}/* =================================
-   TABLETS
-================================= */
+}/* ===========================
+   MOMENTS MOBILE MENU
+=========================== */
 
-@media (max-width: 992px) {
+@media (max-width: 800px) {
 
-    .container,
-    .nav-container {
-        width: 92%;
+    .moments-page-body #primaryNav,
+    body #primaryNav {
+        background: rgba(246, 239, 228, 0.98);
     }
 
-    h1 {
-        font-size: clamp(3rem, 8vw, 5rem);
+    body #primaryNav .nav-links {
+        display: flex;
     }
 
-    h2 {
-        font-size: clamp(2.2rem, 6vw, 4rem);
+    body #primaryNav .nav-links a {
+        color: rgba(51, 38, 26, 0.78);
     }
 
-    section {
-        padding: 5rem 6%;
-    }
-}
-
-/* =================================
-   PHONES
-================================= */
-
-@media (max-width: 768px) {
-
-    .nav-container {
-        flex-wrap: wrap;
-        gap: 1rem;
+    body #primaryNav .nav-links a:hover {
+        color: #241a11;
     }
 
-    .nav-links {
-        display: none;
+    body .menu-toggle {
+        border-color: rgba(51, 38, 26, 0.16);
+        background: rgba(255, 255, 255, 0.28);
     }
 
-    h1 {
-        font-size: clamp(2.5rem, 10vw, 3.8rem);
-        line-height: 1.1;
-    }
-
-    h2 {
-        font-size: clamp(2rem, 8vw, 3rem);
-    }
-
-    section {
-        padding: 4rem 5%;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .grid,
-    .cards,
-    .features,
-    .gallery {
-        grid-template-columns: 1fr;
+    body .menu-toggle span {
+        background: #33261a;
     }
 }

@@ -14,38 +14,48 @@
 <body>
 
 <header class="navbar">
-
-    <div class="nav-container">
+    <div class="container nav-container">
 
         <a href="index.html" class="logo">
             Atelier
         </a>
 
-        <nav>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false"
+            aria-controls="primaryNav">
 
-            <div class="nav-links">
+            <span></span>
+            <span></span>
+            <span></span>
 
-                <a href="discover.html">
-                    Discover
-                </a>
+        </button>
 
-                <a href="moments.html" class="active">
-                    Moments
-                </a>
+        <nav id="primaryNav">
 
-                <a href="about.html">About</a>
+            <ul class="nav-links">
 
+                <li>
+                    <a href="discover.html">Discover</a>
+                </li>
 
-            </div>
+                <li>
+                    <a href="moments.html">Moments</a>
+                </li>
+
+                <li>
+                    <a href="index.html#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#" class="open-signin">
+                        Sign In
+                    </a>
+                </li>
+
+            </ul>
 
         </nav>
 
-        <a href="#" class="nav-button open-signin">
-            Sign In
-        </a>
-
     </div>
-
 </header>
 
     <main>

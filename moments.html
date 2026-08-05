@@ -10,29 +10,50 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/moments.css">
-    <header class="navbar">
+<header class="navbar">
+    <div class="container nav-container">
 
-        <div class="nav-container">
+        <a href="index.html" class="logo">
+            Atelier
+        </a>
 
-            <a href="index.html" class="logo">
-                Atelier
-            </a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false"
+            aria-controls="primaryNav">
 
-            <nav>
-                <div class="nav-links">
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+        <nav id="primaryNav">
+
+            <ul class="nav-links">
+
+                <li>
                     <a href="discover.html">Discover</a>
-                    <a href="moments.html" class="active">Moments</a>
+                </li>
+
+                <li>
+                    <a href="moments.html">Moments</a>
+                </li>
+
+                <li>
                     <a href="index.html#about">About</a>
-                </div>
-            </nav>
+                </li>
 
-            <a href="#" class="nav-button open-signin">
-                Sign In
-            </a>
-        </div>
+                <li>
+                    <a href="#" class="open-signin">
+                        Sign In
+                    </a>
+                </li>
 
-    </header>
+            </ul>
 
+        </nav>
+
+    </div>
+</header>
 
     <main>
 

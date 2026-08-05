@@ -82,24 +82,30 @@ html {
             rgba(232, 218, 197, 0.88) 100%);
 }
 
+.memory-hero {
+    position: relative;
+    z-index: 2;
+}
+
 .memory-hero::after {
     content: "";
 
     position: absolute;
     left: 0;
+    right: 0;
     bottom: 0;
 
-    z-index: -1;
+    height: 300px;
 
-    width: 100%;
-    height: 190px;
-
-    background:
-        linear-gradient(to bottom,
-            transparent,
-            #e8dac5);
-
+    z-index: 1;
     pointer-events: none;
+
+    background: linear-gradient(to bottom,
+            rgba(232, 218, 197, 0) 0%,
+            rgba(232, 218, 197, 0.18) 30%,
+            rgba(232, 218, 197, 0.5) 58%,
+            rgba(232, 218, 197, 0.82) 82%,
+            #e8dac5 100%);
 }
 
 .memory-hero-content {
@@ -122,8 +128,7 @@ html {
 }
 
 .memory-hero .memory-label {
-    color: var(--sage);
-}
+    color: #6e5237;}
 
 .memory-hero h1 {
     max-width: 1000px;
@@ -134,11 +139,10 @@ html {
     font-weight: 400;
     line-height: 0.82;
     letter-spacing: -0.055em;
-
-    color: var(--text);
-
+color: #2f241b;
     text-shadow:
-        0 12px 45px rgba(0, 0, 0, 0.22);
+        0 0 12px rgba(247, 239, 227, .9),
+        0 10px 30px rgba(65, 45, 24, .15);
 }
 
 .memory-meta {
@@ -153,8 +157,7 @@ html {
     letter-spacing: 0.15em;
     text-transform: uppercase;
 
-    color: rgba(243, 245, 240, 0.72);
-}
+    color: rgba(58, 43, 30, .72);}
 
 .memory-scroll-link {
     display: inline-flex;
@@ -166,8 +169,9 @@ html {
     border: 1px solid rgba(255, 255, 255, 0.22);
     border-radius: 999px;
 
-    background: rgba(255, 255, 255, 0.025);
-    color: var(--sage);
+    color: #5b432d;
+        border-color: rgba(91, 67, 45, .28);
+        background: rgba(255, 248, 238, .35);
 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -187,10 +191,9 @@ html {
 .memory-scroll-link:hover {
     transform: translateY(-3px);
 
-    border-color: var(--gold);
-
-    background: rgba(200, 169, 116, 0.08);
-    color: var(--gold);
+    color: #2f241b;
+        border-color: #c8a974;
+        background: rgba(255, 248, 238, .6);
 }
 
 .memory-scroll-link span {
@@ -255,23 +258,18 @@ html {
 /* ===========================
    JOURNAL SECTION
 =========================== */
-
 .memory-journal {
     position: relative;
 
     padding: 9rem 8%;
-
     overflow: hidden;
 
     background:
         radial-gradient(circle at 85% 12%,
-            rgba(255, 255, 255, 0.56),
+            rgba(255, 255, 255, .56),
             transparent 32%),
-        linear-gradient(to bottom,
-            #e8dac5,
-            #eee4d4);
+        #e8dac5;
 }
-
 .memory-journal::before {
     content: "";
 
@@ -1317,103 +1315,27 @@ html {
     background: rgba(200, 169, 116, 0.75);
 }
 
-/* ===========================
-   MEMORY HERO — WARM TEXT COLOURS
-=========================== */
-
-.memory-hero .memory-label {
-    color: #5e4630;
-}
-
-.memory-hero h1 {
-    color: #2f241b;
-
-    text-shadow:
-        0 0 10px rgba(246, 235, 217, 0.92),
-        0 0 24px rgba(246, 235, 217, 0.78),
-        0 12px 35px rgba(57, 41, 24, 0.16);
-}
-
-.memory-meta {
-    color: rgba(58, 43, 30, 0.72);
-}
-
-.memory-scroll-link {
-    border-color: rgba(91, 67, 40, 0.3);
-
-    background: rgba(248, 239, 224, 0.34);
-    color: #5b432d;
-
-    box-shadow:
-        0 10px 26px rgba(74, 53, 31, 0.08);
-}
-
-.memory-scroll-link:hover {
-    border-color: #8f6f45;
-
-    background: rgba(248, 239, 224, 0.62);
-    color: #2f241b;
-}/* =================================
-   TABLETS
-================================= */
-
-@media (max-width: 992px) {
-
-    .container,
-    .nav-container {
-        width: 92%;
+@media (max-width: 800px) {
+    body #primaryNav {
+        background: rgba(245, 238, 225, 0.97);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
     }
 
-    h1 {
-        font-size: clamp(3rem, 8vw, 5rem);
+    body #primaryNav .nav-links a {
+        color: rgba(51, 38, 26, 0.78);
     }
 
-    h2 {
-        font-size: clamp(2.2rem, 6vw, 4rem);
+    body #primaryNav .nav-links a:hover {
+        color: #241a11;
     }
 
-    section {
-        padding: 5rem 6%;
-    }
-}
-
-/* =================================
-   PHONES
-================================= */
-
-@media (max-width: 768px) {
-
-    .nav-container {
-        flex-wrap: wrap;
-        gap: 1rem;
+    body .menu-toggle {
+        border-color: rgba(51, 38, 26, 0.16);
+        background: rgba(255, 255, 255, 0.28);
     }
 
-    .nav-links {
-        display: none;
-    }
-
-    h1 {
-        font-size: clamp(2.5rem, 10vw, 3.8rem);
-        line-height: 1.1;
-    }
-
-    h2 {
-        font-size: clamp(2rem, 8vw, 3rem);
-    }
-
-    section {
-        padding: 4rem 5%;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .grid,
-    .cards,
-    .features,
-    .gallery {
-        grid-template-columns: 1fr;
+    body .menu-toggle span {
+        background: #33261a;
     }
 }

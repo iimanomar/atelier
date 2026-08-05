@@ -1008,10 +1008,6 @@ html {
         grid-template-columns: 1fr auto;
     }
 
-    .signup-page-body .nav-container nav {
-        display: none;
-    }
-
     .signup-page-body .logo {
         font-size: 1.5rem;
     }
@@ -1144,5 +1140,28 @@ html {
     .features,
     .gallery {
         grid-template-columns: 1fr;
+    }
+}@media (max-width: 800px) {
+    body #primaryNav {
+        background: rgba(245, 238, 225, 0.97);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+    }
+
+    body #primaryNav .nav-links a {
+        color: rgba(51, 38, 26, 0.78);
+    }
+
+    body #primaryNav .nav-links a:hover {
+        color: #241a11;
+    }
+
+    body .menu-toggle {
+        border-color: rgba(51, 38, 26, 0.16);
+        background: rgba(255, 255, 255, 0.28);
+    }
+
+    body .menu-toggle span {
+        background: #33261a;
     }
 }
