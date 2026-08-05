@@ -389,67 +389,96 @@
     .planner-button {
         grid-column: 1;
     }
-}/* =================================
-   TABLETS
-================================= */
+}
+/* ===========================
+   PLANNER — TABLET
+=========================== */
 
-@media (max-width: 992px) {
-
-    .container,
-    .nav-container {
-        width: 92%;
+@media (max-width: 1100px) {
+    .planner-page {
+        min-height: auto;
+        padding: 8.5rem 6% 6rem;
+        align-items: flex-start;
     }
 
-    h1 {
-        font-size: clamp(3rem, 8vw, 5rem);
+    .planner-layout {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
     }
 
-    h2 {
-        font-size: clamp(2.2rem, 6vw, 4rem);
+    .planner-intro {
+        max-width: 720px;
     }
 
-    section {
-        padding: 5rem 6%;
+    .planner-form {
+        max-width: none;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
-/* =================================
-   PHONES
-================================= */
 
-@media (max-width: 768px) {
+/* ===========================
+   PLANNER — PHONE
+=========================== */
 
-    .nav-container {
-        flex-wrap: wrap;
-        gap: 1rem;
+@media (max-width: 700px) {
+    .planner-page {
+        min-height: 100svh;
+        padding: 7.5rem 1rem 4rem;
+        align-items: flex-start;
     }
 
-    .nav-links {
-        display: none;
+    .planner-background {
+        background-position: 64% center;
     }
 
-    h1 {
-        font-size: clamp(2.5rem, 10vw, 3.8rem);
-        line-height: 1.1;
+    .planner-overlay {
+        background:
+            linear-gradient(to bottom,
+                rgba(5, 11, 8, 0.82),
+                rgba(5, 11, 8, 0.7));
     }
 
-    h2 {
-        font-size: clamp(2rem, 8vw, 3rem);
+    .planner-layout {
+        gap: 2.5rem;
     }
 
-    section {
-        padding: 4rem 5%;
+    .planner-intro h1 {
+        font-size: clamp(3.2rem, 14vw, 4.5rem);
+        line-height: 0.98;
     }
 
-    img {
-        max-width: 100%;
-        height: auto;
+    .planner-intro>p:not(.section-label) {
+        font-size: 0.92rem;
+        line-height: 1.75;
     }
 
-    .grid,
-    .cards,
-    .features,
-    .gallery {
+    .planner-form {
+        padding: 1.25rem;
         grid-template-columns: 1fr;
+        gap: 1.4rem;
+
+        border-radius: 18px;
+    }
+
+    .form-group,
+    .interest-group,
+    .form-error,
+    .planner-button {
+        grid-column: 1;
+    }
+
+    .interest-options {
+        gap: 0.6rem;
+    }
+
+    .interest-option span {
+        padding: 0.7rem 0.85rem;
+        font-size: 0.72rem;
+    }
+
+    .planner-button {
+        width: 100%;
+        justify-content: center;
     }
 }

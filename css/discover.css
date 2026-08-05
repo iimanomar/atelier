@@ -398,67 +398,102 @@
 .step-row:hover .step-copy h3 {
     color: var(--gold);
     transform: translateX(5px);
-}/* =================================
-   TABLETS
-================================= */
+}/* ===========================
+   DISCOVER — TABLET
+=========================== */
 
-@media (max-width: 992px) {
+@media (max-width: 900px) {
 
-    .container,
-    .nav-container {
-        width: 92%;
+    .discover-hero,
+    .discover-steps {
+        padding-left: 6%;
+        padding-right: 6%;
     }
 
-    h1 {
-        font-size: clamp(3rem, 8vw, 5rem);
+    .step-row {
+        grid-template-columns: 90px 60px 1fr;
+        gap: 1.5rem;
     }
 
-    h2 {
-        font-size: clamp(2.2rem, 6vw, 4rem);
-    }
-
-    section {
-        padding: 5rem 6%;
+    .step-number {
+        font-size: 5.5rem;
     }
 }
 
-/* =================================
-   PHONES
-================================= */
 
-@media (max-width: 768px) {
+/* ===========================
+   DISCOVER — PHONE
+=========================== */
 
-    .nav-container {
-        flex-wrap: wrap;
+@media (max-width: 600px) {
+    .discover-hero {
+        min-height: 100svh;
+        padding: 7.5rem 1.2rem 4.5rem;
+        align-items: flex-end;
+    }
+
+    .discover-hero-background {
+        background-position: 58% center;
+    }
+
+    .discover-hero h1 {
+        font-size: clamp(3.2rem, 14vw, 4.6rem);
+        line-height: 0.98;
+    }
+
+    .discover-hero-content>p:not(.section-label) {
+        font-size: 0.92rem;
+        line-height: 1.75;
+    }
+
+    .discover-steps {
+        padding: 6rem 1.2rem;
+    }
+
+    .discover-steps-heading {
+        margin-bottom: 3.5rem;
+    }
+
+    .discover-steps-heading h2 {
+        font-size: clamp(3rem, 13vw, 4.4rem);
+    }
+
+    .step-row {
+        min-height: 0;
+        padding: 2.5rem 0;
+
+        grid-template-columns: 1fr;
         gap: 1rem;
     }
 
-    .nav-links {
-        display: none;
+    .step-row:hover {
+        transform: none;
     }
 
-    h1 {
-        font-size: clamp(2.5rem, 10vw, 3.8rem);
-        line-height: 1.1;
+    .step-number {
+        font-size: 4.5rem;
     }
 
-    h2 {
-        font-size: clamp(2rem, 8vw, 3rem);
+    .step-icon {
+        width: 56px;
+        height: 56px;
     }
 
-    section {
-        padding: 4rem 5%;
+    .step-icon img {
+        width: 30px;
+        height: 30px;
     }
 
-    img {
-        max-width: 100%;
-        height: auto;
+    .step-copy h3 {
+        font-size: clamp(2.2rem, 11vw, 3.2rem);
     }
 
-    .grid,
-    .cards,
-    .features,
-    .gallery {
-        grid-template-columns: 1fr;
+    .discover-cta {
+        margin-top: 5rem;
+        padding-top: 4rem;
+    }
+
+    .discover-cta h2 {
+        font-size: clamp(3rem, 13vw, 4.3rem);
     }
 }

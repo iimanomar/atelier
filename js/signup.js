@@ -1,6 +1,5 @@
-const navbar =
+const signupPageNavbar =
     document.querySelector(".navbar");
-
 const signupForm =
     document.getElementById("signupForm");
 
@@ -61,15 +60,16 @@ const surpriseDestinations = [
 
 
 function updateSignupNavbar() {
-    if (!navbar) {
+    if (!signupPageNavbar) {
         return;
     }
 
-    navbar.classList.toggle(
+    signupPageNavbar.classList.toggle(
         "scrolled",
         window.scrollY > 25
     );
 }
+
 
 
 function togglePasswordVisibility() {
@@ -241,15 +241,20 @@ function completeSignup() {
     const destination =
         chooseDestination();
 
+    const password =
+        passwordInput.value;
+
     const user = {
         firstName,
         lastName,
         email,
+        password,
         joinedAt:
             new Date().toISOString(),
         firstDestination:
             destination
     };
+
 
     localStorage.setItem(
         "atelierUser",

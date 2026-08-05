@@ -1,5 +1,5 @@
-const navbar = document.querySelector(".navbar");
-
+const navbar =
+    document.querySelector(".navbar");
 const pageHero =
     document.querySelector(".hero") ||
     document.querySelector(".discover-hero") ||
