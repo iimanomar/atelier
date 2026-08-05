@@ -255,52 +255,6 @@
 }
 
 /* ===========================
-   RESPONSIVE
-=========================== */
-
-@media (max-width: 900px) {
-
-    .discover-hero,
-    .discover-steps {
-        padding-left: 6%;
-        padding-right: 6%;
-    }
-
-    .step-row {
-        grid-template-columns: 100px 65px 1fr;
-        gap: 1.5rem;
-    }
-}
-
-@media (max-width: 600px) {
-    .discover-hero {
-        min-height: 100svh;
-        padding: 8rem 5% 5rem;
-    }
-
-    .discover-hero h1 {
-        font-size: clamp(3.5rem, 15vw, 5rem);
-    }
-
-    .discover-steps {
-        padding: 8rem 5%;
-    }
-
-    .step-row {
-        grid-template-columns: 1fr;
-        gap: 1.3rem;
-    }
-
-    .step-number {
-        font-size: 5rem;
-    }
-
-    .discover-cta {
-        margin-top: 7rem;
-        padding-top: 5rem;
-    }
-}
-/* ===========================
    INTERACTIVE STEP ROWS
 =========================== */
 

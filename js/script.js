@@ -525,4 +525,76 @@ function resetAtelierDemo() {
     window.location.href = "index.html";
 }
 
-window.resetAtelierDemo = resetAtelierDemo;
+window.resetAtelierDemo = resetAtelierDemo; 
+
+const menuToggle =
+    document.getElementById("menuToggle");
+
+const primaryNav =
+    document.getElementById("primaryNav");
+
+
+function closeMobileMenu() {
+    if (!menuToggle || !primaryNav) {
+        return;
+    }
+
+    menuToggle.classList.remove("active");
+    primaryNav.classList.remove("active");
+
+    menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+    menuToggle.setAttribute(
+        "aria-label",
+        "Open menu"
+    );
+}
+
+
+if (menuToggle && primaryNav) {
+    menuToggle.addEventListener(
+        "click",
+        () => {
+            const menuIsOpen =
+                primaryNav.classList.toggle("active");
+
+            menuToggle.classList.toggle(
+                "active",
+                menuIsOpen
+            );
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                String(menuIsOpen)
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                menuIsOpen
+                    ? "Close menu"
+                    : "Open menu"
+            );
+        }
+    );
+
+    primaryNav
+        .querySelectorAll("a")
+        .forEach((link) => {
+            link.addEventListener(
+                "click",
+                closeMobileMenu
+            );
+        });
+
+    window.addEventListener(
+        "resize",
+        () => {
+            if (window.innerWidth > 800) {
+                closeMobileMenu();
+            }
+        }
+    );
+}

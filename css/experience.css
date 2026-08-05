@@ -791,11 +791,10 @@
         padding-right: 6%;
     }
 
-    .itinerary-layout {
-        grid-template-columns: 1fr;
-        gap: 4rem;
-    }
-
+        .itinerary-top {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
     .journey-sidebar {
         position: static;
     }
@@ -868,67 +867,95 @@
 
     color: rgba(243, 245, 240, 0.7);
 }
-/* =================================
-   TABLETS
-================================= */
 
-@media (max-width: 992px) {
-
-    .container,
-    .nav-container {
-        width: 92%;
+@media (max-width: 700px) {
+    .experience-hero {
+        min-height: 100svh;
+        padding: 7.5rem 1.2rem 4.5rem;
     }
 
-    h1 {
-        font-size: clamp(3rem, 8vw, 5rem);
+    .experience-hero h1 {
+        font-size: clamp(3.2rem, 14vw, 4.6rem);
+        line-height: 0.98;
     }
 
-    h2 {
-        font-size: clamp(2.2rem, 6vw, 4rem);
+    .experience-hero-content>p:not(.section-label) {
+        font-size: 0.92rem;
+        line-height: 1.75;
     }
 
-    section {
-        padding: 5rem 6%;
+    .journey-details {
+        gap: 0.55rem;
+    }
+
+    .journey-details span {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.68rem;
+    }
+
+    .itinerary-section,
+    .save-journey-section {
+        padding: 6rem 1.2rem;
+    }
+
+    .itinerary-heading h2,
+    .save-journey-copy h2 {
+        font-size: clamp(3rem, 13vw, 4.3rem);
+    }
+
+    .journey-card {
+        padding: 1.5rem;
+    }
+
+    .save-actions {
+        width: 100%;
+    }
+
+    .save-button,
+    .account-link {
+        width: 100%;
+        justify-content: center;
+    }
+}/* ===========================
+   EXPERIENCE — TABLET
+=========================== */
+
+@media (max-width: 1000px) {
+    .itinerary-top {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .journey-sidebar {
+        position: static;
+        width: 100%;
     }
 }
 
-/* =================================
-   PHONES
-================================= */
 
-@media (max-width: 768px) {
+/* ===========================
+   EXPERIENCE — PHONE
+=========================== */
 
-    .nav-container {
-        flex-wrap: wrap;
-        gap: 1rem;
+@media (max-width: 700px) {
+    .itinerary-section {
+        padding: 6rem 1.2rem;
     }
 
-    .nav-links {
-        display: none;
+    .itinerary-top {
+        grid-template-columns: minmax(0, 1fr);
+        margin-bottom: 4rem;
+        gap: 2rem;
     }
 
-    h1 {
-        font-size: clamp(2.5rem, 10vw, 3.8rem);
-        line-height: 1.1;
+    .itinerary-heading,
+    .journey-sidebar {
+        width: 100%;
+        min-width: 0;
     }
 
-    h2 {
-        font-size: clamp(2rem, 8vw, 3rem);
-    }
-
-    section {
-        padding: 4rem 5%;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .grid,
-    .cards,
-    .features,
-    .gallery {
-        grid-template-columns: 1fr;
+    .itinerary-heading h2 {
+        font-size: clamp(3rem, 13vw, 4.3rem);
+        overflow-wrap: anywhere;
     }
 }
