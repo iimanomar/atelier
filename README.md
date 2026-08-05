@@ -8,7 +8,7 @@ Instead of spending hours searching through Instagram, TikToks and Google Maps, 
 
 ---
 
-## ✨ Features
+## Features
 
 - 🌍 Discover personalised travel experiences
 - 🗓️ Generate curated itineraries
@@ -23,7 +23,7 @@ Instead of spending hours searching through Instagram, TikToks and Google Maps, 
 
 ---
 
-## 🛠️ Built With
+## Built With
 
 - HTML5
 - CSS3
@@ -32,7 +32,7 @@ Instead of spending hours searching through Instagram, TikToks and Google Maps, 
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Clone the repository
 
@@ -46,7 +46,7 @@ Navigate into the project folder and open `index.html` using **Live Server** in 
 
 ---
 
-## 🎯 How to Use Atelier
+## How to Use Atelier
 
 1. Explore the homepage.
 2. Learn about Atelier.
@@ -57,7 +57,7 @@ Navigate into the project folder and open `index.html` using **Live Server** in 
 
 ---
 
-## 🌱 Where Atelier Goes Next
+##  Where Atelier Goes Next
 
 Future ideas for the project include:
 
@@ -82,7 +82,7 @@ Future ideas for the project include:
 
 ---
 
-## 👩‍💻 Author
+## Author
 
 **Iman Omar**
 
@@ -93,7 +93,7 @@ GitHub: https://github.com/iimanomar
 
 ---
 
-## 💭 Final Note
+## Final Note
 
 Atelier started as a front-end project and gradually evolved into something much bigger!! Basically a place where travel planning meets storytelling.
 
