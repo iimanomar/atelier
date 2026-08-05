@@ -189,17 +189,15 @@
                         </div>
 
 
-                        <label class="terms-row">
-
-                            <input type="checkbox" id="terms" required>
-
-                            <span>
+                        <div class="terms-row">
+                        
+                            <input type="checkbox" id="terms" name="terms" required>
+                        
+                            <label for="terms">
                                 I agree to keep discovering beautiful places.
-                            </span>
-
-                        </label>
-
-
+                            </label>
+                        
+                        </div>
                         <p class="form-error" id="formError" aria-live="polite"></p>
 
 
@@ -211,13 +209,11 @@
                     </form>
 
                 <p class="login-prompt">
-                
                     Already have an account?
                 
-                    <a href="index.html">
+                    <a href="#" class="open-signin">
                         Sign In
                     </a>
-                
                 </p>
                 </div>
 
@@ -338,8 +334,103 @@
 
 
     <!-- Do not load js/script.js on this page -->
+<!-- 
+==================================
+     SIGN IN MODAL
+================================== -->
 
-    <script src="js/signup.js"></script>
+<div class="signin-overlay" id="signinOverlay">
+
+    <div class="signin-modal" id="signinModal">
+
+        <button class="close-signin" id="closeSignIn" type="button">
+
+            ×
+
+        </button>
+
+        <p class="signin-label">
+            Welcome back
+        </p>
+
+        <h2>
+            Your journal has been waiting.
+        </h2>
+
+        <p class="signin-copy">
+            Continue where your last journey ended.
+        </p>
+
+        <form id="signinForm">
+
+            <div class="signin-field">
+
+                <label for="signinEmail">
+                    Traveller Email
+                </label>
+
+                <input type="email" id="signinEmail" placeholder="you@example.com" required>
+
+            </div>
+
+
+            <div class="signin-field">
+
+                <label for="signinPassword">
+                    Passport Password
+                </label>
+
+                <input type="password" id="signinPassword" placeholder="Password" required>
+
+            </div>
+
+
+            <p class="signin-error" id="signinError">
+            </p>
+
+
+            <button class="signin-submit" id="signinSubmit" type="submit">
+
+                Enter Atelier →
+
+            </button>
+
+        </form>
+
+
+        <!-- Passport Reveal -->
+
+        <div class="passport-verify" id="passportVerify">
+
+            <div class="passport-circle">
+
+                <span>
+                    Atelier
+                </span>
+
+                <strong>
+                    VERIFIED
+                </strong>
+
+                <span>
+                    Welcome Back
+                </span>
+
+            </div>
+
+            <p>
+                Preparing your journal...
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="js/script.js" defer></script>
+<script src="js/signup.js" defer></script>
 
 </body>
 

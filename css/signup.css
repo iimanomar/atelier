@@ -1,7 +1,6 @@
-/* ===========================
-   SIGNUP PAGE
-=========================== */
-
+/*===========================
+SIGNUP PAGE
+===========================*/ 
 html {
     scroll-behavior: smooth;
 }
@@ -554,6 +553,12 @@ html {
     height: 16px;
 
     accent-color: #8a6f47;
+
+    cursor: pointer;
+}
+
+.terms-row label {
+    cursor: pointer;
 }
 
 .form-error {

@@ -4,35 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,500&display=swap"
-    rel="stylesheet">
+        rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Moments | Atelier</title>
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/moments.css">
-<header class="navbar">
+    <header class="navbar">
 
-    <div class="nav-container">
+        <div class="nav-container">
 
-        <a href="index.html" class="logo">
-            Atelier
-        </a>
+            <a href="index.html" class="logo">
+                Atelier
+            </a>
 
-        <nav>
-            <div class="nav-links">
-                <a href="discover.html">Discover</a>
-                <a href="moments.html" class="active">Moments</a>
-                <a href="index.html#about">About</a>
-            </div>
-        </nav>
+            <nav>
+                <div class="nav-links">
+                    <a href="discover.html">Discover</a>
+                    <a href="moments.html" class="active">Moments</a>
+                    <a href="index.html#about">About</a>
+                </div>
+            </nav>
 
-        <a href="login.html" class="nav-button">
-            Sign in
-        </a>
+            <a href="#" class="nav-button open-signin">
+                Sign In
+            </a>
+        </div>
 
-    </div>
-
-</header>
+    </header>
 
 
     <main>
@@ -59,15 +58,16 @@
                 <div class="hero-copy-haze">
 
                     <p class="journal-label">
-                     Your next story begins here.
+                        Your next story begins here.
                     </p>
 
                     <h1>
-                      Remember more than where you went.
+                        Remember more than where you went.
                     </h1>
 
                     <p class="hero-description">
-                        From discovering hidden places to reliving unforgettable adventures, Atelier keeps every journey beautifully organised
+                        From discovering hidden places to reliving unforgettable adventures, Atelier keeps every journey
+                        beautifully organised
                         in one personal archive.
 
                     <div class="hero-actions">
@@ -323,13 +323,93 @@
             </a>
 
         </section>
+        </main>
+        
+        <!-- ==================================
+                 SIGN IN MODAL
+            ================================== -->
+        
+        <div class="signin-overlay" id="signinOverlay">
+        
+            <div class="signin-modal" id="signinModal">
+        
+                <button class="close-signin" id="closeSignIn" type="button">
+                    ×
+                </button>
+        
+                <p class="signin-label">
+                    Welcome back
+                </p>
+        
+                <h2>
+                    Your journal has been waiting.
+                </h2>
+        
+                <p class="signin-copy">
+                    Continue where your last journey ended.
+                </p>
+        
+                <form id="signinForm">
+        
+                    <div class="signin-field">
+        
+                        <label for="signinEmail">
+                            Traveller Email
+                        </label>
+        
+                        <input type="email" id="signinEmail" placeholder="you@example.com" required>
+        
+                    </div>
+        
+                    <div class="signin-field">
+        
+                        <label for="signinPassword">
+                            Passport Password
+                        </label>
+        
+                        <input type="password" id="signinPassword" placeholder="Password" required>
+        
+                    </div>
+        
+                    <p class="signin-error" id="signinError"></p>
+        
+                    <button class="signin-submit" id="signinSubmit" type="submit">
+                        Enter Atelier →
+                    </button>
+        
+                </form>
+        
+                <div class="passport-verify" id="passportVerify">
+        
+                    <div class="passport-circle">
+        
+                        <span>
+                            Atelier
+                        </span>
+        
+                        <strong>
+                            VERIFIED
+                        </strong>
+        
+                        <span>
+                            Welcome Back
+                        </span>
+        
+                    </div>
+        
+                    <p>
+                        Preparing your journal...
+                    </p>
+        
+                </div>
+        
+            </div>
+        
+        </div>
+        
+        <script src="js/script.js" defer></script>
+        <script src="js/moments.js"></script>
 
-    </main>
-
-
-    <script src="js/script.js"></script>
-    <script src="js/moments.js"></script>
-
-</body>
+    </body>
 
 </html>

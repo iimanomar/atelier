@@ -15,7 +15,11 @@ const isMemoryPage =
 function updateNavbar() {
     if (!navbar) {
         return;
-    }    
+    } 
+    if (document.body.classList.contains("signup-page-body")) {
+        return;
+    }
+   
     /*
       Moments has its own navbar styling
       controlled by moments.css and moments.js.
@@ -164,9 +168,8 @@ updateNavbar();
 /* ==================================
    SIGN IN MODAL
 ================================== */
-
-const openSignIn =
-    document.getElementById("openSignIn");
+const openSignInButtons =
+    document.querySelectorAll(".open-signin");
 
 const closeSignIn =
     document.getElementById("closeSignIn");
@@ -353,15 +356,15 @@ function revealSecretBoardingPass() {
 
 /* Open modal */
 
-if (openSignIn) {
-    openSignIn.addEventListener(
+openSignInButtons.forEach((button) => {
+    button.addEventListener(
         "click",
         (event) => {
             event.preventDefault();
             openSigninModal();
         }
     );
-}
+});
 
 
 /* Close button */
