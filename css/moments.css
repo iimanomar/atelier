@@ -1544,4 +1544,67 @@ body {
         align-items: flex-start;
         flex-direction: column;
     }
+}/* =================================
+   TABLETS
+================================= */
+
+@media (max-width: 992px) {
+
+    .container,
+    .nav-container {
+        width: 92%;
+    }
+
+    h1 {
+        font-size: clamp(3rem, 8vw, 5rem);
+    }
+
+    h2 {
+        font-size: clamp(2.2rem, 6vw, 4rem);
+    }
+
+    section {
+        padding: 5rem 6%;
+    }
+}
+
+/* =================================
+   PHONES
+================================= */
+
+@media (max-width: 768px) {
+
+    .nav-container {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    h1 {
+        font-size: clamp(2.5rem, 10vw, 3.8rem);
+        line-height: 1.1;
+    }
+
+    h2 {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+
+    section {
+        padding: 4rem 5%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .grid,
+    .cards,
+    .features,
+    .gallery {
+        grid-template-columns: 1fr;
+    }
 }
