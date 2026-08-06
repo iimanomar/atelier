@@ -11,14 +11,14 @@ Instead of spending hours searching through Instagram, TikToks and Google Maps, 
 ## Features
 
 - 🌍 Discover personalised travel experiences
-- 🗓️ Generate curated itineraries
+-  Generate curated itineraries
 - 💰 Plan around your available time and budget
 - 📖 Save journeys to a digital memory journal
-- 🖼️ Browse memories through destination albums
-- 🔐 Create an account and sign in
-- 💾 Data saved using Local Storage
-- 📱 Fully responsive design
-- 🎨 Cinematic, editorial-inspired user interface
+-  Browse memories through destination albums
+- Create an account and sign in
+- Data saved using Local Storage
+- Fully responsive design
+-  Cinematic, editorial-inspired user interface
 - 🥚 Hidden easter eggs throughout the experience
 
 ---
@@ -63,10 +63,10 @@ Future ideas for the project include:
 
 - 📸 Upload personal travel photos
 - 🗺️ Interactive maps
-- 🤖 AI-powered itinerary recommendations
-- ☁️ Cloud account syncing
+- AI-powered itinerary recommendations
+- Cloud account syncing
 - ❤️ Favourite destinations
-- 🌍 Share memories with friends
+-  Share memories with friends
 
 ---
 
